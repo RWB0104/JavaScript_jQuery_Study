@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		// 함수를 선언합니다.
+		function test1()
+		{
+			try
+			{
+				alert("A 위치입니다.");
+				throw exception;
+			}
+
+			catch (exception)
+			{
+				alert("B 위치입니다.");
+				return;
+			}
+
+			alert("C 위치입니다.");
+		};
+
+		// 함수를 호출합니다.
+		test1();
+
+		function test2()
+		{
+			try
+			{
+				alert("A 위치입니다.");
+				throw exception;
+			}
+
+			catch (exception)
+			{
+				alert("B 위치입니다.");
+				return;
+			}
+
+			finally
+			{
+				alert("C 위치입니다.");
+			}
+		}
+
+		// 함수를 호출합니다.
+		test2();
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

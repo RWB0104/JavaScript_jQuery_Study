@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q2</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영역                 =
+		=============================================*/
+
+		#content > p {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+
+		.condition {
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.condition td {
+			display: inline;
+			margin: 20px;
+			text-align: center;
+			font-size: 15px;
+		}
+
+		.condition td:hover {
+			color: blue;
+			font-weight: bold;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer(sign)
+		{
+			if (sign != null)
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				alert("오답");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q2</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>CDN은 무엇의 약자일까요?</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<table class="condition">
+				<tr>
+					<td onclick="answer();">① Content Destination Node<br /></td>
+					<td onclick="answer(true);">② Content Delivery Network<br /></td>
+					<td onclick="answer();">③ Content Document Network<br /></td>
+					<td onclick="answer();">④ Content Dictate Node<br /></td>
+				</tr>
+			</table>
+		</div>
+	</fieldset>
+</body>
+
+</html>

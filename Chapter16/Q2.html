@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q2</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			alert("직접 만들어보시기 바랍니다.");
+		}
+
+		function solves()
+		{
+			var str = "<!DOCTYPE html>\n" +
+				"<html>\n" +
+				"\n" +
+				"<head>\n" +
+				"\t<script src=\"https://code.jquery.com/jquery-3.4.1.js\" integrity=\"sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=\" crossorigin=\"anonymous\"><\/script>\n" +
+				"\t\n" +
+				"\t<script>\n" +
+				"\t\t$(document).ready(function(event)\n" +
+				"\t\t{\n" +
+				"\t\t\tsetInterval(function()\n" +
+				"\t\t\t{\n" +
+				"\t\t\t\t/\/\ 남은 글자 수를 구합니다.\n" +
+				"\t\t\t\tvar inputLength = $(\"textarea\").val().length;\n" +
+				"\t\t\t\tvar remain = 150 - inputLength;\n" +
+				"\t\t\t\t\n" +
+				"\t\t\t\t/\/\ 문서 객체에 입력합니다.\n" +
+				"\t\t\t\t$(\"h1\").html(remain);\n" +
+				"\t\t\t\t\n" +
+				"\t\t\t\t/\/\ 문서 객체의 색상을 변경합니다.\n" +
+				"\t\t\t\tif (remain >= 0 )\n" +
+				"\t\t\t\t{\n" +
+				"\t\t\t\t\t$(\"h1\").css(\"color\", \"black\");\n" +
+				"\t\t\t\t}\n" +
+				"\t\t\t\t\n" +
+				"\t\t\t\telse\n" +
+				"\t\t\t\t{\n" +
+				"\t\t\t\t\t$(\"h1\").css(\"color\", \"red\");\n" +
+				"\t\t\t\t}\n" +
+				"\t\t\t}, 50);\n" +
+				"\t\t});\n" +
+				"\t<\/script>\n" +
+				"<\/head>\n" +
+				"\n" +
+				"<body>\n" +
+				"\t<div>\n" +
+				"\t\t<p>지금 내 생각을<\/p>\n" +
+				"\t\t<h1>150<\/h1>\n" +
+				"\t\t<textarea cols=\"70\" rows=\"5\"><\/textarea>\n" +
+				"\t<\/div>\n" +
+				"<\/body>\n" +
+				"\n" +
+				"<\/html>";
+
+			$("#answer").val(str);
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q2</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>16.10절에서 언급했던 것처럼 keypress 이벤트가 한국어에 적용되지 않는 브라우저들이 있습니다. 본문에서는 keyup 이벤트를 사용했습니다. 사실 사용자가 하나의 키를 꾹 누르고 있으면 글자가 입력되지만, keyup 이벤트가 발생하지 않으므로 숫자가 변하지 않습니다. 따라서 setInterval() 함수로 계속해서 글자 개수를 확인하고, 이를 기반으로 남은 글자 수를 출력해야 합니다. 직접 구현해보세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</head>

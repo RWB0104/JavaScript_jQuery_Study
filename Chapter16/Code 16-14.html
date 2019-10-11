@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			// 변수를 선언합니다.
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+
+			// 이벤트를 연결합니다.
+			$(canvas).on(
+			{
+				mousedown: function(event)
+				{
+					// TODO
+				},
+
+				mouseup: function(event)
+				{
+					// TODO
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<canvas id="canvas" width="700" height="400" style="border: 3px solid black">
+
+	</canvas>
+</body>
+
+</html>

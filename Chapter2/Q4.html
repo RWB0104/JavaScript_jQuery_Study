@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q4</title>
+
+	<style>
+		td {
+			cursor: pointer;
+		}
+
+		td:hover {
+			color: blue;
+		}
+	</style>
+
+	<script>
+		function answer()
+		{
+			document.getElementById("solves1").innerText = 325;
+			document.getElementById("solves2").innerText = "52273";
+			document.getElementById("solves3").innerText = "52273";
+			document.getElementById("solves4").innerText = "52273";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q4</legend>
+
+		<h2>다음 코드의 실행 결과를 예측해보세요.</h2>
+
+		<p>&lt;script&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(52 + 273);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ①<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('52' + 273);&nbsp;&nbsp;&nbsp;&nbsp;// ②<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(52 + '273');&nbsp;&nbsp;&nbsp;&nbsp;// ③<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('52' + '273');&nbsp;&nbsp;&nbsp;// ④<br />
+			&lt;/script&gt;<br />
+		</p>
+
+		<hr />
+
+		<label for="answer1">①</label>
+		<input type="text" id="answer1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="solves1"></span><br />
+
+		<label for="answer2">②</label>
+		<input type="text" id="answer2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="solves2"></span><br />
+
+		<label for="answer3">③</label>
+		<input type="text" id="answer3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="solves3"></span><br />
+
+		<label for="answer4">④</label>
+		<input type="text" id="answer4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="solves4"></span>
+
+		<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Submit" onclick="answer();">
+
+	</fieldset>
+</body>
+
+</html>

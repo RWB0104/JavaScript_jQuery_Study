@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q4</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h2,
+		p {
+			margin: 10px;
+		}
+
+		input {
+			width: 50px;
+			margin: 0 5px 0 5px;
+		}
+
+		p#solves {
+			color: red;
+		}
+	</style>
+
+	<script>
+		function answer(str)
+		{
+			eval(str);
+		}
+
+		function solves()
+		{
+			document.getElementById("answer").value = "function isNumber(input)\n" +
+				"{\n" +
+				"    if (isNaN(Number(input)))\n" +
+				"    {\n" +
+				"        // 숫자로 변환해서 NaN이라면 = 이상한 것\n" +
+				"        return false;\n" +
+				"    }\n" +
+				"\n" +
+				"    else\n" +
+				"    {\n" +
+				"        // 숫자로 변환해서 NaN이 아니라면 = 숫자\n" +
+				"        return true;\n" +
+				"    }\n" +
+				"}";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q4</legend>
+
+		<h2>사용자에게 입력을 받아서 입력이 숫자로만 구성되어 있는지 확인하는 코드를 작성하세요.</h2>
+		<p>4번은 조금 어려울 수 있어서 추가 설명을 하겠습니다. 지금까지 배웠던 것과 전혀 상관없는 것이라서 당활할 수 있지만, 굉장히 다양한 방법으로 만들 수 있습니다. 문자열에 반복 실행을 해 숫자로만 구성되었는지 확인할 수도 있습니다. 추가로 숫자로 구성된 무자열 자료형을 Number() 함수 등을 통해 숫자로 변환하면 숫자 자료형이 나옵니다. 만약 숫자로 구성되지 않은 문자열이라면 NaN이 나오겠지요. 이를 조건문으로 확인하면 됩니다.</p>
+		<br />
+		<hr />
+
+		<table>
+			<tr>
+				<textarea name="answer" id="answer" cols="50" rows="30"></textarea>
+				<input type="button" value="Submit" onclick="answer(document.getElementById('answer').value);">
+				<br />
+			</tr>
+
+			<tr>
+				<label for="bottonSolves">정답 : </label>
+				<input type="button" id="bottonSolves" value="Solve" onclick="solves();">
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

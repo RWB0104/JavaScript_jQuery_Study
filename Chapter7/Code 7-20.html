@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		class Rectangle
+		{
+			constructor(width, height)
+			{
+				this.width = width;
+				this.height = height;
+			}
+
+			getArea()
+			{
+				return this.width * this.height;
+			}
+		}
+
+		const rectangle = new Rectangle(100, 200);
+
+		alert(rectangle.getArea());
+
+		function Rectangle(width, height)
+		{
+			this.width = width;
+			this.height = height;
+		}
+
+		Rectangle.prototype.getArea = function()
+		{
+			return this.width * this.height;
+		}
+
+		var rectangle = new Rectangle(100, 200);
+
+		alert(rectangle.getArea());
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

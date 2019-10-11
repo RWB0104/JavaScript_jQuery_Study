@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q4</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+        =                  전역 초기화                  =
+        =============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+        =                  title 영역                  =
+        =============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+        =                 content 영역                 =
+        =============================================*/
+
+		#content > p {
+			margin: 10px;
+			font-size: 15px;
+		}
+
+		/*=============================================
+        =                solution 영역                 =
+        =============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+        =                 submit 영역                  =
+        =============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script>
+		function answer(str)
+		{
+			str += "\n\ntrim() 메서드를 사용합니다. 자주 사용하는 메서드이므로 꼭 기억하시기 바랍니다.";
+
+			document.getElementById("answer").value = str;
+
+			alert("비교해보세요.");
+		}
+
+		function solves()
+		{
+			document.getElementById("answer").value = "trim() 메서드를 사용합니다. 자주 사용하는 메서드이므로 꼭 기억하기 바랍니다.";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q4</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>문자열 양쪽의 공백을 제거할 때는 어떤 메서드를 사용할까요? 만약 모르겠다면 웹 브라우저를 열고 구글 등에 검색해서 직접 찾아보세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</html>

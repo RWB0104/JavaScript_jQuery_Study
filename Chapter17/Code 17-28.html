@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Transition Animation</title>
+
+	<style>
+		.movement {
+			transition-duration: 2s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$("h1").click(function()
+			{
+				$(this).css(
+				{
+					backgroundColor: "red"
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1 class="movement">Animation</h1>
+</body>
+
+</html>

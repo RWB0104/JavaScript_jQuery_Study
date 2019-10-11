@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q2</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		#condition {
+			border: 2px solid black;
+			margin: 0 0 10px 5px;
+		}
+
+		#tableHeader {
+			background: black;
+			color: white;
+		}
+
+		#tableHeader > td {
+			width: 120px;
+			text-align: center;
+			font-weight: bold;
+			height: 25px;
+		}
+
+		h2 {
+			margin: 10px;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script>
+		function answer(str)
+		{
+			eval(str);
+		}
+
+		function solves()
+		{
+			document.getElementById("answer").innerHTML = "var unit = [\n" +
+				"{ name: \"일벌레\", mineral: 50, gas: 0, supply: 1 },\n" +
+				"{ name: \"여왕\", mineral: 150, gas: 0, supply: 2 },\n" +
+				"{ name: \"바퀴\", mineral: 75, gas: 25, supply: 2 },\n" +
+				"{ name: \"히드라리스크\", mineral: 100, gas: 50, supply: 2 },\n" +
+				"{ name: \"타락귀\", mineral: 150, gas: 100, supply: 2 }\n" +
+				"];\n" +
+				"\n" +
+				"var output = \"\"\n" +
+				"for (var i in unit)\n" +
+				"{\n" +
+				"   for (var j in unit[i])\n" +
+				"   {\n" +
+				"       output += [j] + \":  \" + unit[i][j] + \"\\n\"\n" +
+				"   }\n" +
+				"\n" +
+				"   output += \"\\n\"\n" +
+				"}\n" +
+				"\n" +
+				"alert(output);";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q2</legend>
+
+		<h2>다음과 같은 데이터를 자바스크립트 객체의 배열로 만들어보세요.</h2>
+		<br />
+
+		<table id="condition">
+			<tr id="tableHeader">
+				<td>이름(name)</td>
+				<td>미네랄(mineral)</td>
+				<td>가스(gas)</td>
+				<td>보급품(supply)</td>
+			</tr>
+
+			<tr>
+				<td>일벌레</td>
+				<td>50</td>
+				<td>0</td>
+				<td>1</td>
+			</tr>
+
+			<tr>
+				<td>여왕</td>
+				<td>150</td>
+				<td>0</td>
+				<td>2</td>
+			</tr>
+
+			<tr>
+				<td>바퀴</td>
+				<td>75</td>
+				<td>25</td>
+				<td>50</td>
+			</tr>
+
+			<tr>
+				<td>히드라리스크</td>
+				<td>100</td>
+				<td>50</td>
+				<td>2</td>
+			</tr>
+
+			<tr>
+				<td>타락귀</td>
+				<td>150</td>
+				<td>100</td>
+				<td>2</td>
+			</tr>
+		</table>
+		<hr />
+
+		<table>
+			<tr>
+				<textarea name="answer" id="answer" cols="50" rows="20"></textarea>
+				<br />
+			</tr>
+
+			<tr>
+				<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+				<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

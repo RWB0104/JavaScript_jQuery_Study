@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q3</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+        =                  전역 초기화                  =
+        =============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+        =                  title 영역                  =
+        =============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+        =                 content 영역                 =
+        =============================================*/
+
+		#content > p {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+
+		.condition {
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.condition td {
+			display: inline;
+			margin: 20px;
+			text-align: center;
+			font-size: 15px;
+		}
+
+		.condition td:hover {
+			color: blue;
+			font-weight: bold;
+		}
+	</style>
+
+	<script>
+		function answer(sign)
+		{
+			if (sign != null)
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				alert("오답");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q3</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>다음 배열 메서드에서 ECMAScript 5에서 추가된 메서드는 무엇일까요? 참고로 ECMAScript 5에서 추가된 메서드는 인터넷 익스플로러 8 버전 이하에서 실행되지 않기 때문에 어느 정도 기억하고 있어야 문제가 발생했을 때 대처할 수 있습니다.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<table class="condition">
+				<tr>
+					<td onclick="answer(true);">① forEach()</td>
+					<td onclick="answer();">② sort()</td>
+					<td onclick="answer();">③ push()</td>
+					<td onclick="answer();">④ splice()</td>
+				</tr>
+			</table>
+		</div>
+	</fieldset>
+</body>
+
+</html>

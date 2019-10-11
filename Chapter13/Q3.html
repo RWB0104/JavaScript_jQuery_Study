@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q3</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		#content > p {
+			margin: 10px;
+			font-size: 15px;
+		}
+
+		#content1 {
+			width: 50%;
+			float: left;
+		}
+
+		#content2 {
+			width: 50%;
+			float: right;
+		}
+
+		#content1 p,
+		#content2 p {
+			margin-left: 30%;
+		}
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		.condition {
+			border: 2px solid black;
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.answer {
+			width: 25px;
+			margin-left: 50px;
+			text-align: center;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 10px 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			if ($("#answer1").val() === "a" && $("#answer2").val() === "c" && $("#answer3").val() === "b" && $("#answer4").val() === "d")
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				var str = "";
+
+				if ($("#answer1").val() != "a")
+				{
+					str += "1번 오답\n";
+				}
+
+				if ($("#answer2").val() != "c")
+				{
+					str += "2번 오답\n";
+				}
+
+				if ($("#answer3").val() != "b")
+				{
+					str += "3번 오답\n";
+				}
+
+				if ($("#answer4").val() != "d")
+				{
+					str += "4번 오답\n";
+				}
+
+				alert(str);
+			}
+		}
+
+		function solves()
+		{
+			$("#answer1").val("a");
+			$("#answer2").val("c");
+			$("#answer3").val("d");
+			$("#answer4").val("b");
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q3</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>왼쪽 항목의 선택자 형태가 무엇인지 오른쪽 항목에 연결해보세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<div id="content1">
+				<p>① #header</p>
+				<p>② .header</p>
+				<p>③ [data-role=header]</p>
+				<p>④ *</p>
+			</div>
+
+			<div id="content2">
+				<p>ⓐ 아이디 선택자</p>
+				<p>ⓑ 전체 선택자</p>
+				<p>ⓒ 클래스 선택자</p>
+				<p>ⓓ 속성 선택자</p>
+			</div>
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<table class="condition">
+				<tr>
+					<td>① #header</td>
+					<td><input type="text" id="answer1" class="answer"></td>
+				</tr>
+
+				<tr>
+					<td>② .header</td>
+					<td><input type="text" id="answer2" class="answer"></td>
+				</tr>
+
+				<tr>
+					<td>③ [data-role=header]</td>
+					<td><input type="text" id="answer3" class="answer"></td>
+				</tr>
+
+				<tr>
+					<td>④ *</td>
+					<td><input type="text" id="answer4" class="answer"></td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer();">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</html>

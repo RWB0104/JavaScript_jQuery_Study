@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		// 학생 정보 배열을 만듭니다.
+		var students = [
+			{
+				이름: "윤인성",
+				국어: 87,
+				수학: 98,
+				영어: 88,
+				과학: 95
+			},
+			/* 생략 */
+			{
+				이름: "서준시",
+				국어: 45,
+				수학: 52,
+				영어: 72,
+				과학: 78
+			}
+		];
+
+		// 과학 성적이 98점 넘는 학생을 필터링합니다.
+		var filteredA = students.filter(function(item)
+		{
+			return item > 90;
+		});
+
+		alert(filteredA);
+
+		// 평균이 90점 넘는 학생을 필터링합니다.
+		var filteredB = students.filter(function(item)
+		{
+			return ((item.국어 + item.수학 + item.영어 + item.과학) / 4) > 90;
+		});
+
+		alert(filteredB);
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

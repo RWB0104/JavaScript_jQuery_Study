@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+        =                  전역 초기화                  =
+        =============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+        =                  title 영역                  =
+        =============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+        =                 content 영역                 =
+        =============================================*/
+
+		#content > p {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+
+		.condition {
+			border: 2px solid black;
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.tableHeader {
+			background: navy;
+			color: white;
+		}
+
+		.tableHeader > td {
+			width: 250px;
+		}
+
+		/*=============================================
+        =                solution 영역                 =
+        =============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+        =                 submit 영역                  =
+        =============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script>
+		function answer(str)
+		{
+			eval(str);
+		}
+
+		function solves()
+		{
+			document.getElementById("answer").value = "function Product(name, weight, price)\n" +
+				"{\n" +
+				"   this.name = name;\n" +
+				"   this.weight = weight;\n" +
+				"   this.price = price;\n" +
+				"}\n" +
+				"\n" +
+				"Product.prototype.calculate = function(weight)\n" +
+				"{\n" +
+				"   return this.price * (weight / this.weight);\n" +
+				"};\n" +
+				"\n" +
+				"var product = new Product(\"돼지 삼겹살\", 100, 1690);\n" +
+				"alert(product.calculate(200));\n";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q1</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>다음과 같은 객체를 생성할 수 있는 생성자 함수를 예로 들어보시오(생성자 함수 이름은 Product, 키 이름과 자료형은 적절하다고 생각하는 것을 사용하시기 바랍니다).</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<table class="condition">
+				<!-- 표 타이틀 -->
+				<tr class="tableHeader">
+					<td>속성</td>
+					<td>값</td>
+				</tr>
+
+				<tr>
+					<td>이름</td>
+					<td>돼지 삼겹살</td>
+				</tr>
+
+				<tr>
+					<td>무게</td>
+					<td>100g</td>
+				</tr>
+
+				<tr>
+					<td>가격</td>
+					<td>1690원</td>
+				</tr>
+			</table>
+
+			<table class="condition">
+				<!-- 표 타이틀 -->
+				<tr class="tableHeader">
+					<td>메서드</td>
+					<td>설명</td>
+				</tr>
+
+				<tr>
+					<td>calculate(&lt;무게&gt;)</td>
+					<td>무게를 기반으로 가격을 계산합니다.</td>
+				</tr>
+			</table>
+
+			<p>예로 product.calculate(200)이라고 입력하면, 100g * 2 = 200g이므로, '3380원'을 출력하면 됩니다.</p>
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</html>

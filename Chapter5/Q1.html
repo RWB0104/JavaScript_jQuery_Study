@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			margin: 10px;
+		}
+
+		input {
+			width: 50px;
+			margin: 0 5px 0 5px;
+		}
+
+		p#solves {
+			color: red;
+		}
+	</style>
+
+	<script>
+		function answer(num)
+		{
+			document.getElementById("solves").innerText = "정답 : 10   1000    NaN"
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q1</legend>
+
+		<h2>다음 코드의 실행 결과를 예측하세요.</h2>
+		<br />
+
+		<table>
+			<tr>
+				<p>&emsp;function test(a, b, c)</p>
+				<p>&emsp;{</p>
+				<p>&emsp;&emsp;console.log(a);</p>
+				<p>&emsp;&emsp;console.log(a * b);</p>
+				<p>&emsp;&emsp;console.log(a * b * c);</p>
+				<p>&emsp;}</p>
+				<br />
+				<p>&emsp;test(10, 100);</p>
+			</tr>
+		</table>
+		<hr />
+
+		<table>
+			<tr>
+				<label for="answer">입력 : </label>
+				<input type="text" id="answer1">
+				<input type="text" id="answer2">
+				<input type="text" id="answer3">
+				<input type="button" value="Submit" onclick="answer();">
+			</tr>
+
+			<tr>
+				<p id="solves">정답 : </p>
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

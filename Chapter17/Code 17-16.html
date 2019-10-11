@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			position: relative;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$("div").each(function(index)
+			{
+				// (index * 500)초 후 animate() 메서드를 실행합니다.
+				$(this).delay(index * 50).animate(
+				{
+					left: 500
+				}, "slow");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q3</title>
+
+	<style>
+		td {
+			cursor: pointer;
+		}
+
+		td:hover {
+			color: blue;
+		}
+	</style>
+
+	<script>
+		function answer(num)
+		{
+			if (num === 2)
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				alert("오답");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q3</legend>
+
+		<h2>다음 중 자료형을 검사할 때 사용하는 것과 그 분류를 바르게 적은 것을 골라보세요.</h2>
+		<table>
+			<tr>
+				<td onclick="answer(1);">① typeof() - 함수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(2);">② typeof() - 연산자</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(3);">③ types - 속성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(4);">④ types() - 함수</td>
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

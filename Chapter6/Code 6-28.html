@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		// 함수를 선언합니다.
+		function test(option)
+		{
+			// 옵션 객체를 초기화합니다.
+			option.valueA = option.valueA || 10;
+			option.valueB = option.valueB || 20;
+			option.valueC = option.valueC || 30;
+
+			// 출력합니다.
+			alert(option.valueA + ":" + option.valueB + ":" + option.valueC);
+		}
+
+		// 함수를 호출합니다.
+		test(
+		{
+			valueA: 52,
+			valueC: 273
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

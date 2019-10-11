@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		#condition {
+			border: 2px solid black;
+			margin: 0 0 10px 5px;
+		}
+
+		#tableHeader {
+			background: black;
+			color: white;
+		}
+
+		h2 {
+			margin: 10px;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script>
+		function answer(str)
+		{
+			eval(str);
+		}
+
+		function solves()
+		{
+			document.getElementById("answer").innerHTML = "var book = {\n" +
+				" name: \"Nature of Code\",\n" +
+				" price: 30000,\n" +
+				" author: \"다니엘 쉬프만\",\n" +
+				" isbn: \"9788968481901\",\n" +
+				" page: 620\n" +
+				"};\n" +
+				"\n" +
+				"var output = \"\"\n" +
+				"for (var i in book)\n" +
+				"{\n" +
+				" output += i + \" \" + book[i] + \"\\n\";\n" +
+				"}\n" +
+				"\n" +
+				"alert(output);";
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q1</legend>
+
+		<h2>다음과 같은 표를 자바스크립트 객체로 만들어보세요(키 이름과 자료형은 적절하다고 생각하는 것을 사용하기 바랍니다).</h2>
+		<br />
+
+		<table id="condition">
+			<tr id="tableHeader">
+				<td>이름</td>
+				<td>값</td>
+			</tr>
+
+			<tr>
+				<td>이름</td>
+				<td>Nature of Code</td>
+			</tr>
+
+			<tr>
+				<td>가격</td>
+				<td>30000원</td>
+			</tr>
+
+			<tr>
+				<td>저자</td>
+				<td>다니엘 쉬프만</td>
+			</tr>
+
+			<tr>
+				<td>ISBN</td>
+				<td>9788968481901</td>
+			</tr>
+
+			<tr>
+				<td>페이지 수</td>
+				<td>620페이지</td>
+			</tr>
+		</table>
+		<hr />
+
+		<table>
+			<tr>
+				<textarea name="answer" id="answer" cols="50" rows="20"></textarea>
+				<br />
+			</tr>
+
+			<tr>
+				<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+				<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

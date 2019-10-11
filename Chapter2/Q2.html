@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q2</title>
+
+	<style>
+		td {
+			cursor: pointer;
+		}
+
+		td:hover {
+			color: blue;
+		}
+	</style>
+
+	<script>
+		function answer(num)
+		{
+			if (num === 2)
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				alert("오답");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q2</legend>
+
+		<h2>다음 중 변수를 선언할 때 사용하는 키워드를 고르세요.</h2>
+		<table>
+			<tr>
+				<td onclick="answer(1);">① func&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(2);">② var</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(3);">③ function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(4);">④ constant</td>
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

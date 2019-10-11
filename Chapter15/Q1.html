@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			alert("직접 만들어보시기 바랍니다.");
+		}
+
+		function solves()
+		{
+			var str = "<!-- 예시 -->\n" +
+				"\n" +
+				"<!-- 생성자 함수 -->\n" +
+				"<script>\n" +
+				"\t// MovingText의 생성자 함수\n" +
+				"\tvar canvasWidth = 700;\n" +
+				"\tvar canvasHeight = 400;\n" +
+				"\tfunction MovingText()\n" +
+				"\t{\n" +
+				"\t\t// 위치와 속도 속성\n" +
+				"\t\tthis.x = nextRandomInteger(canvasWidth);\n" +
+				"\t\tthis.y = nextRandomInteger(canvasHeight);\n" +
+				"\t\tthis.vx = randomSpeed(10);\n" +
+				"\t\tthis.vy = randomSpeed(10);\n" +
+				"\t\t// 문서 객체를 생성합니다. (jQuery)\n" +
+				"\t\tthis.$header = $(\"<h1></h1>\")\n" +
+				"\t\t\t.text(randomAlphabet())\n" +
+				"\t\t\t.css(\"position\", \"absolute\")\n" +
+				"\t\t\t.appendTo(\"body\");\n" +
+				"\t}\n" +
+				"\tMovingText.prototype.move = function()\n" +
+				"\t{\n" +
+				"\t\t// 범위 검사\n" +
+				"\t\tif(this.x < 0 || this.x > canvasWidth)\n" +
+				"\t\t{\n" +
+				"\t\t\tthis.vx *= -1;\n" +
+				"\t\t}\n" +
+				"\t\tif(this.y < 0 || this.y > canvasHeight)\n" +
+				"\t\t{\n" +
+				"\t\t\tthis.vy *= -1;\n" +
+				"\t\t}\n" +
+				"\t}\n" +
+				"<\/script>";
+
+			$("#answer").val(str);
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q1</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>10장의 조금 더 나아가기에서 만들었던 에제들을 jQuery로 수정해서 만들어보세요. 코드가 꽤 간단해질 것입니다.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</html>

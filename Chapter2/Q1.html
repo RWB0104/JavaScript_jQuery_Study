@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<style>
+		td {
+			cursor: pointer;
+		}
+
+		td:hover {
+			color: blue;
+		}
+
+		p#solves {
+			color: red;
+		}
+	</style>
+
+	<script>
+		function answer(num)
+		{
+			var ans = prompt("정답을 입력하세요.", "정답");
+
+			document.getElementById("answer").innerText = `입력 : ${ans}`;
+
+			if (num === 1)
+			{
+				document.getElementById("solves").innerText = "정답 : 값을 만들어내는 간단한 코드"
+			}
+
+			else if (num === 2)
+			{
+				document.getElementById("solves").innerText = "정답 : 하나 이상의 표현식이 모여 구성되는 코드를 읽어 들이는 단위가 되는 것"
+			}
+
+			else if (num === 3)
+			{
+				document.getElementById("solves").innerText = "정답 : 프로그래밍 언어가 처음 만들어질 때 정해진 특별한 의미가 있는 단어"
+			}
+
+			else if (num === 4)
+			{
+				document.getElementById("solves").innerText = "정답 : 이름을 붙일 때 사용하는 단어"
+			}
+
+			else if (num === 5)
+			{
+				document.getElementById("solves").innerText = "정답 : 프로그램 코드를 설명하며, 프로그램의 진행에 전혀 영향을 주지 않는 문장"
+			}
+
+			else if (num === 6)
+			{
+				document.getElementById("solves").innerText = "정답 : 문자를 표현할 때 사용하는 자료형"
+			}
+
+			else if (num === 7)
+			{
+				document.getElementById("solves").innerText = "정답 : 숫자를 표현할 때 사용하는 자료형"
+			}
+
+			else if (num === 8)
+			{
+				document.getElementById("solves").innerText = "정답 : 참과 거짓을 표현할 때 사용하는 자료형"
+			}
+
+			else if (num === 9)
+			{
+				document.getElementById("solves").innerText = "정답 : 값을 저장할 때 사용하는 식별자"
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Q1</legend>
+
+		<h2>이번 장의 도입 부분에서 '꼭 알아둘 개념'으로 다음과 같은 요소를 살펴보았습니다. 직접 설명해보세요.</h2>
+		<table>
+			<tr>
+				<td onclick="answer(1);">① 표현식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(2);">② 문장</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(3);">③ 키워드&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(4);">④ 식별자</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(5);">⑤ 주석&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(6);">⑥ 문자열</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(7);">⑦ 숫자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td onclick="answer(8);">⑧ 불</td>
+			</tr>
+
+			<tr>
+				<td onclick="answer(9);">⑨ 변수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+		</table>
+		<hr />
+
+		<table>
+			<tr>
+				<p id="answer">입력 : </p>
+			</tr>
+
+			<tr>
+				<p id="solves">정답 : </p>
+			</tr>
+		</table>
+	</fieldset>
+</body>
+
+</html>

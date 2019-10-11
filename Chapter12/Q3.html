@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q3</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영역                 =
+		=============================================*/
+
+		#content > p {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+
+		.condition {
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.condition td {
+			display: inline;
+			margin: 20px;
+			text-align: center;
+			font-size: 15px;
+		}
+
+		.condition td:hover {
+			color: blue;
+			font-weight: bold;
+		}
+	</style>
+
+	<script>
+		function answer(sign)
+		{
+			if (sign != null)
+			{
+				alert("정답");
+			}
+
+			else
+			{
+				alert("오답");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q3</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>예외 처리 구문의 조합으로 옳지 않은 것을 고르세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<table class="condition">
+				<tr>
+					<td onclick="answer();">① try {} catch (exception) {}<br /></td>
+					<td onclick="answer();">② try {} finally {}<br /></td>
+					<td onclick="answer(true);">③ try {} finally {} catch (exception) {}<br /></td>
+					<td onclick="answer();">④ try {} catch (exception) {}<br /></td>
+				</tr>
+			</table>
+		</div>
+	</fieldset>
+</body>
+
+</html>
