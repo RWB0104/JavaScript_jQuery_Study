@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Colorbox</title>
+
+	<link rel="stylesheet" href="colorbox.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="jquery.colorbox.js"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$("a").colorbox(
+			{
+				inline: true,
+				width: 550
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>jQuery Colorbox</h1>
+	<a id="colorbox" href="#dialog">Dialog with Colorbox</a>
+
+	<!-- 다이얼로그 -->
+	<div id="dialogs" style="display: none;">
+		<div id="dialog">
+			<h1>Auto OPEN Colorbox</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius totam distinctio officia iusto ipsa. Suscipit tempore obcaecati tempora ex aspernatur distinctio ipsum nam ratione quia necessitatibus, facilis aliquid unde dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit beatae laboriosam explicabo corrupti qui accusantium iste impedit ipsam nostrum eaque saepe id odit sunt quod nesciunt, unde soluta, necessitatibus quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, impedit quas est atque, provident consectetur odio deserunt necessitatibus delectus culpa voluptatem, harum nemo non? Blanditiis vero porro quibusdam voluptate.</p>
+		</div>
+	</div>
+</body>
+
+</html>

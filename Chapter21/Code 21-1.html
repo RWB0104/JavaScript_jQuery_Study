@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+		// 변수를 선언합니다.
+		var input = "";
+		input += "모던 웹 디자인을 위한 HTML5 + CSS3 입문, 한빛미디어, 윤인성, 30000원\n";
+		input += "모던 웹을 위한 JavaScript + jQuery 입문, 한빛미디어, 윤인성, 32000원\n"
+		input += "모던 웹을 위한 node.js 프로그래밍, 한빛미디어, 윤인성, 25000원\n";
+
+		// 한 줄씩 자릅니다.
+		input = input.split("\n");
+
+		for (var i = 0; i < input.length; i++)
+		{
+			// 쉼표를 기준으로 자릅니다.
+			input[i] = input[i].split(",");
+
+			for (var j = 0; j < input[i].length; j++)
+			{
+				// 각 데이터 양 옆의 공백을 제거합니다.
+				input[i][j] = input[i][j].trim();
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

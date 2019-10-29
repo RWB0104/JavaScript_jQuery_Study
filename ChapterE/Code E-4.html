@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>인터넷 익스플로러의 문서 모드 관련 문제</title>
+
+	<style>
+		p {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		div {
+			border: 1px solid black;
+			padding: 5px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			width: 500px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>인터넷 익스플로러의 문서 모드 관련 문제</h1>
+	<p>비주얼 스튜디오로 서버를 실행하면 최신 기능이 실행되지 않는 경우가 있습니다.</p>
+	<br />
+	<p>인트라넷 같은 환경에서는 문서 모드가 특이한 형태로 선택되어 발생하는 문제입니다. 따라서 실제 서비스할 때는 이런 문제가 발생하지 않습니다. 하지만 개발하는 동안에는 문제가 될 수 있겠죠?</p>
+	<hr />
+
+	<p>다음과 같은 코드를 head 태그 내부에 삽입하면 항상 현재 버전의 인터넷 익스플로러를 기준으로 웹 페이지를 보여줍니다.</p>
+	<div>
+		<p>&lt;head&gt;</p>
+		<p>&emsp;&emsp;&lt;title&gt;IE Problem&lt;/title&gt;</p>
+		<p>&emsp;&emsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</p>
+		<p>&lt;/head&gt;</p>
+	</div>
+</body>
+
+</html>

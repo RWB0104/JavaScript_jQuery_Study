@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jQuery Ajax Basic</title>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$.getJSON("/data.json", function(data)
+			{
+				$.each(data, function(key, value)
+				{
+					$("body").append("<h1>" + value.name + " : " + value.price + "</h1>");
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

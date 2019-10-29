@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jQuery Ajax Basic</title>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$.ajax(
+			{
+				url: "data.xml",
+				success: function(data)
+				{
+					$(data).find("product").each(function()
+					{
+						// TODO
+					});
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

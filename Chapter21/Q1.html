@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		#content > p {
+			margin: 10px;
+			font-size: 15px;
+		}
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 10px 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			alert("직접 확인해보는 문제입니다.");
+		}
+
+		function solves()
+		{
+			alert("직접 확인해보는 문제입니다.");
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q1</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>csv, xml, json 형식의 예를 인터넷에서 직접 찾아보세요. 몇 가지 예를 들자면 교보무고 또는 은행 사이트에서 데이터 받기를 누르면 대부분 csv 형식으로 받아집니다. 기상청, 신문사 사이트에 접속해보면 rss라는 xml 형식의 데이터를 제공합니다. 이러한 활용 예를 직접 눈으로 살펴보세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer();">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</html>

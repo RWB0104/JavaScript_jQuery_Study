@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q1</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		#content {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			alert("Oracle, MySQL, Microsoft SQL Server, PostgreSQL, SQLite, MongoDB, Memcached, Redis 등이 포함되면 정답");
+		}
+
+		function solves()
+		{
+			$("#answer").val("직접 확인해보는 문제입니다. Oracle, MySQL, Microsoft SQL Server, PostgreSQL, SQLite, MongoDB, Memcached, Redis 등을 찾았을 것이라 생각합니다.");
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q1</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>MySQL 데이터베이스 이외에 자주 사용되는 데이터베이스를 찾아보세요. SQL을 사용하지 않는 데이터베이스도 있습니다. 예를 들어, MongoDB는 자바스크립트로 데이터를 관리합니다.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			<p>구글 검색에서 '관계형 데이터베이스', 'NoSQL 데이터베이스' 등으로 검색해보세요. 추가로 많이 사용되는데, 단순한 검색으로 찾기 힘든 데이터베이스로 'Memcached'와 'Redis'가 있습니다. 이와 관련된 내용도 살펴보기 바랍니다.</p>
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</head>

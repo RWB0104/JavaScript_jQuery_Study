@@ -1,0 +1,19 @@
+// 모듈을 추출합니다.
+var http = require("express");
+var express = require("express");
+
+// 웹 서버를 생성합니다.
+var app = express();
+app.use(express.static("public"));
+
+// 웹 서버를 라우트합니다.
+app.get("/data.redirect", function(request, response)
+{
+	// TODO
+});
+
+// 웹 서버를 실행합니다.
+app.listen(52273, function()
+{
+	console.log("Server Running at http://127.0.0.1:52273");
+});

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>node.js 오류</title>
+
+	<style>
+		p {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		div {
+			border: 1px solid black;
+			padding: 5px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			width: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>node.js 오류</h1>
+	<p>node.js는 자바스크립트를 프로그래밍 언어로 사용하므로 방금 살펴본 오류 모두 발생합니다. 그리고 지금부터 알아볼 오류가 추가로 발생합니다.</p>
+	<hr />
+
+	<h3>Cannot find module "경로"</h3>
+	<p>처음 node.js 애플리케이션을 공부할 때 자주 보는 오류입니다. 애플리케이션 파일이 현재 폴더에 없을 경우 뜹니다.</p>
+
+	<h3>Cannot find module "식별자"</h3>
+	<p>Connot find module "express"처럼 모듈이 없다고 하는 경우입니다. 모듈이 설치되지 않았을 때 발생하는 오류입니다. "npm install 식별자" 명령어로 모듈을 설치하세요.</p>
+
+	<h3>listen EADDRINUSE</h3>
+	<p>다른 프로그램이 같은 포트를 사용하고 있을 경우 발생하는 오류입니다. 다음과 같은 두 가지 경우가 원인이 됩니다.</p>
+	<br />
+	<p>1. 다른 프로그램이 같은 포트를 사용하고 있을 경우</p>
+	<p>2. 같은 프로그램을 두 번 실행했을 경우</p>
+	<br />
+	<p>책에서는 52273 포트를 사용하는데, 일반적으로 사용되지 않는 포트입니다. 따라서 1번 경우 보다는 2번 경우가 많습니다. 다른 명령 프롬프트로 프로그램을 실행하고 있지 않은지 살펴보세요!</p>
+</body>
+
+</html>

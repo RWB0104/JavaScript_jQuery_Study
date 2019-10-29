@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$.ajax("https://api.github.com/users/jquery/repos",
+			{
+				dataType: "jsonp",
+				success: function(input)
+				{
+					alert(input.data);
+				}
+			});
+		})
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

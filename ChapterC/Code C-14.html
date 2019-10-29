@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function()
+		{
+			// 로컬 저장소의 내용을 출력합니다.
+			function printSessionStorage()
+			{
+				// div 태그를 비웁니다.
+				$("div").empty();
+
+				// div 태그에 로컬 저장소의 내용을 출력합니다.
+				for (var key in sessionStorage)
+				{
+					$("<h1></h1>").html(key + ": " + sessionStorage[key]).appendTo("div");
+				}
+			}
+
+			// 로컬 저장소를 사용합니다.
+			if (window.sessionStorage)
+			{
+				printSessionStorage();
+
+				$("input:button").click(function()
+				{
+					// 변수를 선언합니다.
+					var key = $("#key").val();
+					var value = $("#value").val();
+
+					// 데이터를 추가합니다.
+					sessionStorage.setItem(key, value);
+
+					// 데이터를 출력합니다.
+					printSessionStorage();
+				});
+			}
+
+			else
+			{
+				alert("세션 저장소를 사용할 수 없는 브라우저입니다.");
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<input type="text" id="key" />
+	<input type="text" id="value" />
+
+	<input type="button" value="저장" />
+
+	<div id="output">
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Q2</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+
+	<style>
+		/*=============================================
+		=                  전역 초기화                  =
+		=============================================*/
+
+		* {
+			margin: 0;
+			padding: 0;
+
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		/*=============================================
+		=                  title 영역                  =
+		=============================================*/
+
+		#title {
+			margin: 10px;
+		}
+
+		/*=============================================
+		=                 content 영 역                =
+		=============================================*/
+
+		/*=============================================
+		=                 solution 영역                =
+		=============================================*/
+
+		#solution {
+			position: relative;
+		}
+
+		#answer {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+
+		/*=============================================
+		=                 submit 영역                  =
+		=============================================*/
+
+		#submit {
+			text-align: center;
+		}
+
+		.button {
+			border-radius: 5px;
+			width: 70px;
+			height: 30px;
+			margin: 0 5px 10px 5px;
+
+			font-weight: bold;
+			color: white;
+		}
+
+		.red {
+			background: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+		}
+
+		.red:hover {
+			background: white;
+			color: rgb(255, 100, 100);
+			border: 2px solid rgb(255, 100, 100);
+
+			transition: 0.5s;
+		}
+
+		.green {
+			background: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+		}
+
+		.green:hover {
+			background: white;
+			color: rgb(80, 200, 80);
+			border: 2px solid rgb(80, 200, 80);
+
+			transition: 0.5s;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		function answer()
+		{
+			alert("serializeArray() 메서드는 map() 두 개와 filter()로 이루어져있다.\n첫 번째 map() 메서드는 현재 문서의 내부 양식을 모두 가져와 배열화한다.\nfilter() 메서드는 name 속성, 활성화 상태로 필터링한다.\n두 번째 map() 메서드는 입력 양식의 값을 추출한다.");
+		}
+
+		function solves()
+		{
+			$("#answer").val("Development 버전의 jQuery 파일을 받고, serializeArray 메서드를 검색해서 분석해봅니다. 찾아보면 map(), filter(), map()메서드의 조합으로 만들어져 있을 겁니다.\n\t1. 첫 번째 map() 메서드에서는 현재 문서 객체 내부의 입력 양식을 모두 가져와서 배열로 만듭니다.\n\t2. filter() 메서드에서는 name 속성이 있는지, 활성화 상태인지로 필터링합니다.\n\t3. 두 번째 map() 메서드에서는 val() 메서드로 입력 양식의 값을 추출해서 배열로 만듭니다.\njQuery 코드를 처음 보는 사람은 대부분 \"첫 번째 줄에 있는 this.map()의 this가 무엇을 의미하는 것일까?\"라고 고민하는 경우가 많습니다. jQuery.fn.extend() 메서드로 serializeArray() 메서드를 추가했으므로, $(<선택자>.serializeArray()로 사용할 때 $(<선택자>).serializeArray()로 사용할 때 $(<선택자>) 부분을 의미합니다. 이와 관련된 내용이 기억나지 않는다면, 20.2절을 참고해주세요.");
+		}
+	</script>
+</head>
+
+<body>
+	<fieldset>
+		<!-- 문제 번호 -->
+		<legend>Q2</legend>
+
+		<!-- title -->
+		<div id="title">
+			<h2>jQuery 소스 코드를 직접 열고 serializeArray() 메서드를 분석해보세요.</h2>
+		</div>
+
+		<!-- 문제 부가설명 -->
+		<div id="content">
+			serialize() 메서드는 serializeArray() 메서드를 활용해 만들어지는 메서드이므로 serializeArray() 메서드를 분석하고 나면 자동적으로 이해할 수 있을 것입니다.
+		</div>
+
+		<!-- 구분선 -->
+		<hr />
+
+		<!-- 풀이 -->
+		<div id="solution">
+			<textarea name="answer" id="answer" rows="20"></textarea>
+		</div>
+
+		<!-- 제출 -->
+		<div id="submit">
+			<input type="button" class="button green" value="Submit" onclick="answer(document.getElementById('answer').value);">
+			<input type="button" id="bottonSolves" class="button red" value="Solve" onclick="solves();">
+		</div>
+	</fieldset>
+</body>
+
+</head>

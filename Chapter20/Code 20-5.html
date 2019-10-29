@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<script>
+		// 플러그인을 만듭니다.
+		$.fn.myPluginMethod = function(options)
+		{
+			$(this).css("color", "white");
+			$(this).css("background", "black");
+		};
+
+		$(document).ready(function()
+		{
+			// 플러그인을 사용합니다.
+			$("h1").myPluginMethod();
+
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Header A</h1>
+	<h1>Header 2</h1>
+</body>
+
+</html>
